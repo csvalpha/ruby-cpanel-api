@@ -1,8 +1,8 @@
-require 'improvmx/aliases'
-require 'improvmx/response'
-require 'improvmx/exceptions/exceptions'
+require 'cpanel/aliases'
+require 'cpanel/response'
+require 'cpanel/exceptions/exceptions'
 
-module Improvmx
+module Cpanel
   # Utils to help processing data
   module Utils
     # Parse the forward to parameter into a comma separated string

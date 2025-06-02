@@ -5,14 +5,14 @@ SimpleCov.start do
   minimum_coverage 85
 end
 
-require 'improvmx'
+require 'cpanel'
 RSpec.configure(&:raise_errors_for_deprecations!)
 
 require 'dotenv'
 Dotenv.load
 
-APIKEY = ENV['IMPROVMX_APIKEY']
-DOMAIN = ENV['IMPROVMX_DOMAIN']
+APIKEY = ENV['CPANEL_APIKEY']
+DOMAIN = ENV['CPANEL_DOMAIN']
 
 # require 'vcr'
 # VCR.configure do |c|

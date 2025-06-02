@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'improvmx'
+require 'cpanel'
 
-describe Improvmx::Aliases do
-  let(:client) { Improvmx::Client.new(APIKEY) }
+describe Cpanel::Aliases do
+  let(:client) { Cpanel::Client.new(APIKEY) }
   let(:alias_name) { 'test' }
   let(:other_alias_name) { 'new' }
   let(:forward_to) { 'receiver@example.com' }

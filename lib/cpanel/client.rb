@@ -1,26 +1,26 @@
-require 'improvmx/aliases'
-require 'improvmx/smtp'
-require 'improvmx/response'
-require 'improvmx/utils'
-require 'improvmx/exceptions/exceptions'
+require 'cpanel/aliases'
+require 'cpanel/smtp'
+require 'cpanel/response'
+require 'cpanel/utils'
+require 'cpanel/exceptions/exceptions'
 
-module Improvmx
+module Cpanel
   class Client
-    include Improvmx::Aliases
-    include Improvmx::SMTP
-    include Improvmx::Utils
+    include Cpanel::Aliases
+    include Cpanel::SMTP
+    include Cpanel::Utils
 
-    def initialize(api_key = Improvmx.api_key)
+    def initialize(api_key = Cpanel.api_key)
       rest_client_params = {
         user: 'api',
         password: api_key,
-        user_agent: "improvmx-ruby/#{Improvmx::VERSION}",
+        user_agent: "cpanel-ruby/#{Cpanel::VERSION}",
         headers: {
           content_type: "application/json"
         }
       }
 
-      @http_client = RestClient::Resource.new('https://api.improvmx.com/v3', rest_client_params)
+      @http_client = RestClient::Resource.new('https://api.cpanel.com/v3', rest_client_params)
     end
 
     def post(resource_path, data, headers = {})

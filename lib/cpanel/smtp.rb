@@ -1,4 +1,4 @@
-module Improvmx
+module Cpanel
   # All SMTP related endpoints
   module SMTP
     def list_smtp(domain, params = {})

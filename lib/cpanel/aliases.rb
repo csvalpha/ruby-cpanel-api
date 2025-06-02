@@ -1,4 +1,4 @@
-module Improvmx
+module Cpanel
   # All alias related endpoints
   module Aliases
     def list_aliases(domain, params = {})

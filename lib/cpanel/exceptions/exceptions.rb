@@ -1,8 +1,8 @@
-module Improvmx
+module Cpanel
   class Error < StandardError
     attr_reader :object
 
-    # Public: initialize a Improvmx:Error object
+    # Public: initialize a Cpanel:Error object
     #
     # message - a String describing the error
     # object  - an object with details about the error

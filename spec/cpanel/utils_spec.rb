@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'improvmx/utils'
+require 'cpanel/utils'
 
-describe Improvmx::Utils do
+describe Cpanel::Utils do
   include described_class
 
   context 'when with string' do

@@ -1,5 +1,5 @@
-module Improvmx
-  # Ruby representation of ImprovMX response
+module Cpanel
+  # Ruby representation of Cpanel response
   class Response
     attr_accessor :body, :code
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'improvmx'
+require 'cpanel'
 
-describe Improvmx::SMTP do
-  let(:client) { Improvmx::Client.new(APIKEY) }
+describe Cpanel::SMTP do
+  let(:client) { Cpanel::Client.new(APIKEY) }
   let(:smtp_username) { 'test' }
   let(:smtp_password) { SecureRandom.hex }
   let(:new_smtp_password) { SecureRandom.hex }
