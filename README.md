@@ -1,6 +1,6 @@
 ---------------- WORK IN PROGRESS ---------------
-Cpanel Ruby Gem 
 ============
+Cpanel Ruby Gem 
 
 Ruby interface to connect to the Cpanel API.
 
