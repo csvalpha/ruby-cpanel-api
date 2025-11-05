@@ -1,4 +1,4 @@
-module Cpanel
+module CpanelEmail
   module Forwarders
     def list_forwarders(domain)
       get("Email/list_forwarders", { domain: domain })

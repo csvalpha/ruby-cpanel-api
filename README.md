@@ -11,7 +11,7 @@ Installation
 ------------
 
 ```ruby
-gem install cpanel
+gem install cpanel-email
 ```
 
 Usage
@@ -19,17 +19,17 @@ Usage
 This is how you can use this gem
 
 ```ruby
-require 'cpanel'
+require 'cpanel_email'
 
 # Configure the gem globally (e.g., in a Rails initializer)
-Cpanel.configure do |config|
+CpanelEmail.configure do |config|
   config.host = ENV['CPANEL_HOST']
   config.username = ENV['CPANEL_USERNAME']
   config.api_key = ENV['CPANEL_APIKEY']
 end
 
 # Instantiate the Client (API key, host, and username can also be passed directly here)
-client = Cpanel::Client.new
+client = CpanelEmail::Client.new
 
 # --- Email Forwarders ---
 
@@ -70,12 +70,12 @@ puts "Account deleted."
 
 Cpanel has a rate limit system, to handle this you can do
 ```ruby
-require 'cpanel'
-client = Cpanel::Client.new
+require 'cpanel_email'
+client = CpanelEmail::Client.new
 
 begin
   client.list_forwarders(domain: 'your-domain.com')
-rescue Cpanel::RateLimitError => e
+rescue CpanelEmail::RateLimitError => e
   sleep e.wait_seconds
   retry
 end
@@ -86,7 +86,7 @@ Rails
 
 The library can be initialized with a Rails initializer containing similar:
 ```ruby
-Cpanel.configure do |config|
+CpanelEmail.configure do |config|
   config.host = ENV['CPANEL_HOST']
   config.username = ENV['CPANEL_USERNAME']
   config.api_key = ENV['CPANEL_APIKEY']

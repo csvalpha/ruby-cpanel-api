@@ -5,7 +5,7 @@ SimpleCov.start do
   minimum_coverage 85
 end
 
-require 'cpanel'
+require 'cpanel_email'
 RSpec.configure(&:raise_errors_for_deprecations!)
 
 require 'dotenv'

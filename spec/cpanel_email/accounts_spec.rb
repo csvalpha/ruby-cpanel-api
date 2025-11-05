@@ -1,8 +1,8 @@
 require 'spec_helper'
 require 'cpanel'
 
-describe Cpanel::Accounts do
-  let(:client) { Cpanel::Client.new(APIKEY, HOST, USERNAME) }
+describe CpanelEmail::Accounts do
+  let(:client) { CpanelEmail::Client.new(APIKEY, HOST, USERNAME) }
   let(:domain) { DOMAIN }
   let(:email) { 'test@' + domain }
   let(:password) { 'password' }

@@ -1,4 +1,4 @@
-module Cpanel
+module CpanelEmail
   class Error < StandardError
     attr_reader :object
 

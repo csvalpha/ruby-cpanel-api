@@ -1,8 +1,8 @@
 require 'spec_helper'
 require 'cpanel'
 
-describe Cpanel::Forwarders do
-  let(:client) { Cpanel::Client.new(APIKEY, HOST, USERNAME) }
+describe CpanelEmail::Forwarders do
+  let(:client) { CpanelEmail::Client.new(APIKEY, HOST, USERNAME) }
   let(:domain) { DOMAIN }
   let(:email) { 'test@' + domain }
   let(:forward_to) { 'receiver@example.com' }

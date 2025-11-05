@@ -1,4 +1,4 @@
-module Cpanel
+module CpanelEmail
   module Accounts
     def list_accounts(domain:)
       get("Email/list_pops_with_disk", { domain: domain })

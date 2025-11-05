@@ -1,18 +1,18 @@
-require 'cpanel/forwarders'
-require 'cpanel/accounts'
-require 'cpanel/response'
-require 'cpanel/utils'
-require 'cpanel/exceptions/exceptions'
+require 'cpanel_email/forwarders'
+require 'cpanel_email/accounts'
+require 'cpanel_email/response'
+require 'cpanel_email/utils'
+require 'cpanel_email/exceptions/exceptions'
 
-module Cpanel
+module CpanelEmail
   class Client
-    include Cpanel::Forwarders
-    include Cpanel::Accounts
-    include Cpanel::Utils
+    include CpanelEmail::Forwarders
+    include CpanelEmail::Accounts
+    include CpanelEmail::Utils
 
-    def initialize(api_key = Cpanel.api_key, host = Cpanel.host, username = Cpanel.username)
+    def initialize(api_key = CpanelEmail.api_key, host = CpanelEmail.host, username = CpanelEmail.username)
       rest_client_params = {
-        user_agent: "cpanel-ruby/#{Cpanel::VERSION}",
+        user_agent: "cpanel-email-ruby/#{CpanelEmail::VERSION}",
         headers: {
           'Authorization' => "cpanel #{username}:#{api_key}"
         }
