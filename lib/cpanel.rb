@@ -8,7 +8,7 @@ require 'cpanel/exceptions/exceptions'
 # Module for interaction with Cpanel
 module Cpanel
   class << self
-    attr_accessor :api_key
+    attr_accessor :api_key, :host, :username
 
     def configure
       yield self

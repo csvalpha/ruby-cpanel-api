@@ -9,12 +9,12 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.description = 'Ruby interface for the Cpanel API'
   spec.summary = 'Ruby interface for the Cpanel API'
-  spec.authors = ['C.S.V. Alpha', 'Matthijs Vos']
+  spec.authors = ['C.S.V. Alpha', 'Jorai Geertsema']
   spec.email = 'ict@csvalpha.nl'
 
   spec.files = %w[LICENSE README.md cpanel.gemspec] + Dir['lib/**/*.rb']
   spec.require_paths = %w[lib]
 
-  spec.required_ruby_version = '>= 2.4'
-  spec.add_dependency 'rest-client', '~> 2.0'
+  spec.required_ruby_version = '>= 3.2'
+  spec.add_dependency 'rest-client', '~> 1.0'
 end

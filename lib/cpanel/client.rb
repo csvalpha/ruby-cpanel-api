@@ -1,26 +1,24 @@
-require 'cpanel/aliases'
-require 'cpanel/smtp'
+require 'cpanel/forwarders'
+require 'cpanel/accounts'
 require 'cpanel/response'
 require 'cpanel/utils'
 require 'cpanel/exceptions/exceptions'
 
 module Cpanel
   class Client
-    include Cpanel::Aliases
-    include Cpanel::SMTP
+    include Cpanel::Forwarders
+    include Cpanel::Accounts
     include Cpanel::Utils
 
-    def initialize(api_key = Cpanel.api_key)
+    def initialize(api_key = Cpanel.api_key, host = Cpanel.host, username = Cpanel.username)
       rest_client_params = {
-        user: 'api',
-        password: api_key,
         user_agent: "cpanel-ruby/#{Cpanel::VERSION}",
         headers: {
-          content_type: "application/json"
+          'Authorization' => "cpanel #{username}:#{api_key}"
         }
       }
 
-      @http_client = RestClient::Resource.new('https://api.cpanel.com/v3', rest_client_params)
+      @http_client = RestClient::Resource.new("https://#{host}:2083/execute", rest_client_params)
     end
 
     def post(resource_path, data, headers = {})
