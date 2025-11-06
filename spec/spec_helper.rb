@@ -11,12 +11,10 @@ RSpec.configure(&:raise_errors_for_deprecations!)
 require 'dotenv'
 Dotenv.load
 
-APIKEY = ENV['CPANEL_APIKEY']
 HOST = ENV['CPANEL_HOST']
 USERNAME = ENV['CPANEL_USERNAME']
-DOMAIN = ENV['CPANEL_DOMAIN']
 APIKEY = ENV['CPANEL_APIKEY']
-DOMAIN = ENV['CPANEL_DOMAIN']
+
 
 # require 'vcr'
 # VCR.configure do |c|

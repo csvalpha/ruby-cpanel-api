@@ -1,4 +1,4 @@
-require 'cpanel/aliases'
+require 'cpanel/forwarder'
 require 'cpanel/response'
 require 'cpanel/exceptions/exceptions'
 

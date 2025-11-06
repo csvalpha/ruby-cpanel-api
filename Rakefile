@@ -4,7 +4,7 @@ require 'rspec/core/rake_task'
 
 desc 'Build Gem'
 task :build do
-  system 'gem build cpanel.gemspec'
+  system 'gem build cpanel-email.gemspec'
 end
 
 desc 'Run tests'
